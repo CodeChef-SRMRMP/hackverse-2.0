@@ -2,18 +2,11 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-import {
-  Cross1Icon,
-  DropdownMenuIcon,
-  HamburgerMenuIcon,
-  MoonIcon,
-  SunIcon,
-} from "@radix-ui/react-icons";
+import { HamburgerMenuIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetDescription,
   SheetFooter,
@@ -87,7 +80,7 @@ const Header = () => {
   return (
     <div
       className={cn(
-        "flex items-center justify-between px-5 sticky top-0",
+        "flex z-50 items-center justify-between px-5 sticky top-0",
         scrolled &&
           "shadow-md dark:shadow-none dark:border-b dark:border-primary-dark/20 "
       )}
@@ -133,15 +126,11 @@ const Header = () => {
 
       <Sheet>
         <SheetTrigger className="lg:hidden">
-          <Button className="lg:hidden" variant={"ghost"} size={"icon"}>
-            <HamburgerMenuIcon className="w-5 h-5" />
-          </Button>
+          <HamburgerMenuIcon className="w-5 h-5" />
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle className="text-left flex items-center gap-3">
-              <p>Contents</p>
-            </SheetTitle>
+            <SheetTitle>Contents</SheetTitle>
             <SheetDescription className="flex flex-col gap-10 pt-10 text-lg">
               <div>
                 {routes?.map((route, index) => {
@@ -157,8 +146,8 @@ const Header = () => {
               </div>
             </SheetDescription>
           </SheetHeader>
-          <SheetFooter className="flex mt-10  justify-between flex-row items-center">
-            <p className="uppercase font-bold animate-pulse ">
+          <SheetFooter className="flex mt-10 text-left justify-between flex-row items-center">
+            <p className="uppercase  font-bold animate-pulse ">
               &copy; Hackverse 2.0
             </p>
             <Button variant={"ghost"} size={"icon"} onClick={toggleTheme}>
