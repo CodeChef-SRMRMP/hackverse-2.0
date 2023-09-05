@@ -1,31 +1,31 @@
-// import { useCallback } from "react";
-// import type { Container, Engine } from "tsparticles-engine";
-// import Particles from "react-particles";
-// import { loadSlim } from "tsparticles-slim";
+import { useCallback } from "react";
+import type { Container, Engine } from "tsparticles-engine";
+import Particles from "react-particles";
+import { loadSlim } from "tsparticles-slim";
 
 import Header from "@/components/Header";
 
 export default function Home() {
-  // const particlesInit = useCallback(async (engine: Engine) => {
-  //   console.log(engine);
+  const particlesInit = useCallback(async (engine: Engine) => {
+    console.log(engine);
 
-  //   await loadSlim(engine);
-  // }, []);
+    await loadSlim(engine);
+  }, []);
 
-  // const particlesLoaded = useCallback(
-  //   async (container: Container | undefined) => {
-  //     await console.log(container);
-  //   },
-  //   []
-  // );
+  const particlesLoaded = useCallback(
+    async (container: Container | undefined) => {
+      await console.log(container);
+    },
+    []
+  );
   return (
     <main>
-      {/* <Particles
+      <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
-          fpsLimit: 120,
+          fpsLimit: 90,
           interactivity: {
             events: {
               onClick: {
@@ -88,9 +88,8 @@ export default function Home() {
           },
           detectRetina: true,
         }}
-      /> */}
+      />
       <Header />
-      <div className="h-screen"></div>
     </main>
   );
 }

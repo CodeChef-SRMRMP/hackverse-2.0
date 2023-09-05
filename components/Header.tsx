@@ -80,9 +80,9 @@ const Header = () => {
   return (
     <div
       className={cn(
-        "flex z-50 items-center justify-between px-5 sticky top-0",
+        "flex  z-50 items-center justify-between px-5 sticky top-0",
         scrolled &&
-          "shadow-md dark:shadow-none dark:border-b dark:border-primary-dark/20 "
+          "shadow-md bg-background dark:shadow-none dark:border-b dark:border-primary-dark/20 "
       )}
     >
       <Image
