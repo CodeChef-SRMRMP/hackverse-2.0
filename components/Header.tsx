@@ -1,11 +1,19 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Menu, Moon, Sun } from "lucide-react";
+
+import {
+  Cross1Icon,
+  DropdownMenuIcon,
+  HamburgerMenuIcon,
+  MoonIcon,
+  SunIcon,
+} from "@radix-ui/react-icons";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetFooter,
@@ -94,46 +102,72 @@ const Header = () => {
       <div className="items-center gap-5 hidden lg:inline-flex">
         {routes?.map((route, index) => {
           return (
-            <button
+            <p
               className="font-bold uppercase cursor-pointer hover:underline hover:underline-offset-4 hover:text-primary/60 dark:hover:text-primary-dark/60 transition-all ease-out active:scale-95"
               key={index}
             >
               {route.name}
-            </button>
+            </p>
           );
         })}
       </div>
-      <Button className="hidden lg:inline-flex" variant={"ghost"} size={"icon"}>
-        {theme === "light" ? (
-          <Moon onClick={toggleTheme} />
-        ) : (
-          <Sun onClick={toggleTheme} />
-        )}
-      </Button>
+      {theme === "light" ? (
+        <Button
+          className="hidden lg:inline-flex"
+          variant={"ghost"}
+          onClick={toggleTheme}
+          size={"icon"}
+        >
+          <MoonIcon className="w-5 h-5" />
+        </Button>
+      ) : (
+        <Button
+          className="hidden lg:inline-flex"
+          variant={"ghost"}
+          size={"icon"}
+          onClick={toggleTheme}
+        >
+          <SunIcon className="h-5 w-5" />
+        </Button>
+      )}
+
       <Sheet>
         <SheetTrigger className="lg:hidden">
           <Button className="lg:hidden" variant={"ghost"} size={"icon"}>
-            <Menu />
+            <HamburgerMenuIcon className="w-5 h-5" />
           </Button>
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle>Contents</SheetTitle>
-            <SheetDescription className="flex flex-col gap-5 pt-10 text-lg">
-              {routes?.map((route, index) => {
-                return (
-                  <button
-                    className="font-bold uppercase cursor-pointer hover:underline hover:underline-offset-4 hover:text-primary/60 dark:hover:text-primary-dark/60 transition-all ease-out active:scale-95"
-                    key={index}
-                  >
-                    {route.name}
-                  </button>
-                );
-              })}
+            <SheetTitle className="text-left flex items-center gap-3">
+              <p>Contents</p>
+            </SheetTitle>
+            <SheetDescription className="flex flex-col gap-10 pt-10 text-lg">
+              <div>
+                {routes?.map((route, index) => {
+                  return (
+                    <p
+                      className="font-bold text-left uppercase cursor-pointer hover:underline hover:underline-offset-4 hover:text-primary/60 dark:hover:text-primary-dark/60 transition-all ease-out active:scale-95"
+                      key={index}
+                    >
+                      {route.name}
+                    </p>
+                  );
+                })}
+              </div>
             </SheetDescription>
           </SheetHeader>
-          <SheetFooter className="text-white/30 absolute bottom-0 p-4 ">
-            &copy; Hackverse 2.0
+          <SheetFooter className="flex mt-10  justify-between flex-row items-center">
+            <p className="uppercase font-bold animate-pulse ">
+              &copy; Hackverse 2.0
+            </p>
+            <Button variant={"ghost"} size={"icon"} onClick={toggleTheme}>
+              {theme === "light" ? (
+                <MoonIcon className="w-5 h-5" />
+              ) : (
+                <SunIcon className="h-5 w-5" />
+              )}
+            </Button>
           </SheetFooter>
         </SheetContent>
       </Sheet>
