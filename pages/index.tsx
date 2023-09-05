@@ -30,6 +30,9 @@ export default function Home() {
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
+        style={{
+          zIndex: -1,
+        }}
         options={{
           fpsLimit: 90,
           interactivity: {
