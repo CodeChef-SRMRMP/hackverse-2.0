@@ -16,13 +16,13 @@ const Hero = () => {
     };
   }, []);
   return (
-    <div className="w-screen h-[calc(100vh-100px)] flex flex-col justify-center items-center">
+    <div className="w-screen snap-start h-[calc(100vh-100px)] flex flex-col justify-center items-center">
       <Image
         alt="human"
         src="/assets/images/man-illustration.png"
         width={100}
         height={100}
-        className="fixed top-48  left-0 z-0"
+        className="absolute md:fixed top-36  left-0 z-0"
       />
       <div className="flex flex-col items-center rounded-md">
         <div className="flex items-center font-bold gap-1 text-4xl md:text-7xl lg:text-9xl">
