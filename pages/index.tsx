@@ -4,6 +4,9 @@ import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import { OurSponsors } from "@/components/OurSponsors";
+import Head from "next/head";
 
 export default function Home() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -20,10 +23,16 @@ export default function Home() {
   );
   return (
     <main>
+      <Head>
+        <title>Hackverse 2.0</title>
+      </Head>
       <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
+        style={{
+          zIndex: -1,
+        }}
         options={{
           fpsLimit: 90,
           interactivity: {
@@ -90,6 +99,10 @@ export default function Home() {
         }}
       />
       <Header />
+      <div className="snap-y">
+        <Hero />
+        <OurSponsors />
+      </div>
     </main>
   );
 }
