@@ -9,23 +9,23 @@ import {
 import Image from "next/image";
 
 export const OurSponsors = () => {
-  const titleSponsors = ["xdc.png"];
+  const titleSponsors: string[] = ["xdc.png"];
 
-  const diamondSponsors = [];
-  const goldenSponsors = [];
+  const diamondSponsors: string[] = [];
+  const goldenSponsors: string[] = [];
 
-  const silverSponsors = ["devfolio.png", "solidity-scan.png"];
-  const bronzeSponsors = [
+  const silverSponsors: string[] = ["devfolio.png", "solidity-scan.png"];
+  const bronzeSponsors: string[] = [
     "filecoin.png",
     "polygon.png",
     "replit.png",
     "solana.png",
   ];
-  const poweredBy = ["dimo.png"];
+  const poweredBy: string[] = ["dimo.png"];
   return (
     <div className="w-screen snap-start min-h-[calc(100vh-100px)]">
       <h1 className="text-center text-3xl font-bold py-5">Our Sponsors</h1>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 px-5 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="max-w-6xl items-stretch justify-center mx-auto grid grid-cols-1 px-5 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <MainCard
           imageFolder="titleSponsors"
           title="Title Sponsors"

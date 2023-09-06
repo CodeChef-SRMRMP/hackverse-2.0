@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { OurSponsors } from "@/components/OurSponsors";
 import Head from "next/head";
+import FAQs from "@/components/FAQs";
 
 export default function Home() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -102,6 +103,7 @@ export default function Home() {
       <div className="snap-y">
         <Hero />
         <OurSponsors />
+        <FAQs />
       </div>
     </main>
   );
