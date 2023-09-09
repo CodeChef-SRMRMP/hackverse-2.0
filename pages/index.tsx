@@ -7,6 +7,9 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { OurSponsors } from "@/components/OurSponsors";
 import Head from "next/head";
+import FAQs from "@/components/FAQs";
+import PrizeSection from "@/components/PrizeSection";
+import Schedule from "@/components/Schedule";
 
 export default function Home() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -39,7 +42,7 @@ export default function Home() {
             events: {
               onClick: {
                 enable: true,
-                mode: "push",
+                mode: "",
               },
               onHover: {
                 enable: true,
@@ -102,6 +105,9 @@ export default function Home() {
       <div className="snap-y">
         <Hero />
         <OurSponsors />
+        <Schedule />
+        <PrizeSection />
+        <FAQs />
       </div>
     </main>
   );

@@ -35,8 +35,8 @@ export const Counter = () => {
 
   return (
     <div className="flex gap-4">
-      <div className="w-16 md:w-20 lg:w-24 flex flex-col justify-center items-center rounded bg-secondary border bg-opacity-10">
-        <span className="w-full py-1 text-4xl md:text-5xl lg:text-6xl text-center white-space-nowrap overflow-hidden">
+      <div className="w-16 md:w-20 py-3 lg:w-32 flex flex-col justify-center items-center rounded bg-secondary border bg-opacity-10">
+        <span className="w-full text-4xl md:text-5xl lg:text-6xl text-center white-space-nowrap overflow-hidden">
           {timeLeft?.days}
         </span>
         <span className="w-full py-0.5 text-xs md:text-sm lg:text-sm uppercase font-bold text-center white-space-nowrap overflow-hidden">
@@ -44,8 +44,8 @@ export const Counter = () => {
         </span>
       </div>
 
-      <div className="w-16 md:w-20 lg:w-24 flex flex-col justify-center items-center rounded bg-secondary border bg-opacity-10">
-        <span className="w-full py-1 text-4xl md:text-5xl lg:text-6xl text-center white-space-nowrap overflow-hidden">
+      <div className="w-16 md:w-20 py-3 lg:w-32 flex flex-col justify-center items-center rounded bg-secondary border bg-opacity-10">
+        <span className="w-full text-4xl md:text-5xl lg:text-6xl text-center white-space-nowrap overflow-hidden">
           {timeLeft?.hours}
         </span>
         <span className="w-full py-0.5 text-xs md:text-sm lg:text-sm uppercase font-bold text-center white-space-nowrap overflow-hidden">
@@ -53,8 +53,8 @@ export const Counter = () => {
         </span>
       </div>
 
-      <div className="w-16 md:w-20 lg:w-24 flex flex-col justify-center items-center rounded bg-secondary border bg-opacity-10">
-        <span className="w-full py-1 text-4xl md:text-5xl lg:text-6xl text-center white-space-nowrap overflow-hidden">
+      <div className="w-16 md:w-20 py-3 lg:w-32 flex flex-col justify-center items-center rounded bg-secondary border bg-opacity-10">
+        <span className="w-full text-4xl md:text-5xl lg:text-6xl text-center white-space-nowrap overflow-hidden">
           {timeLeft?.minutes}
         </span>
         <span className="w-full py-0.5 text-xs md:text-sm lg:text-sm uppercase font-bold text-center white-space-nowrap overflow-hidden">
@@ -62,8 +62,8 @@ export const Counter = () => {
         </span>
       </div>
 
-      <div className="w-16 md:w-20 lg:w-24 flex flex-col justify-center items-center rounded bg-secondary border bg-opacity-10">
-        <span className="w-full py-1 text-4xl md:text-5xl lg:text-6xl text-center white-space-nowrap overflow-hidden">
+      <div className="w-16 md:w-20 py-3 lg:w-32 flex flex-col justify-center items-center rounded bg-secondary border bg-opacity-10">
+        <span className="w-full text-4xl md:text-5xl lg:text-6xl text-center white-space-nowrap overflow-hidden">
           {timeLeft?.seconds}
         </span>
         <span className="w-full py-0.5 text-xs md:text-sm lg:text-sm uppercase font-bold text-center white-space-nowrap overflow-hidden">
