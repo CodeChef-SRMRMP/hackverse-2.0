@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <div className="bg-background pt-5 z-50 relative border-t ">
-      <div className=" max-w-6xl mx-auto flex items-center justify-between">
+    <div className="bg-background  pt-5 z-50 relative border-t ">
+      <div className=" max-w-6xl px-5 mx-auto flex items-center justify-between">
         <Image
           src={'/assets/images/short-logo.ico'}
           alt="logo-short"
@@ -38,7 +38,7 @@ const Footer = () => {
               <Twitter />
             </Link>
           </div>
-          <h1 className="text-right font-bold">
+          <h1 className="text-right text-sm md:text-accent-foreground font-bold">
             For more updates
             <br /> Follow us on our social Media
           </h1>
