@@ -72,7 +72,7 @@ const day3 = [
 
 export default function Schedule() {
   return (
-    <div className="w-screen max-w-6xl mx-auto px-5">
+    <div id="schedule" className="w-screen max-w-6xl mx-auto px-5">
       <h1 className="text-center text-3xl font-bold py-5">Schedule</h1>
       <Tabs
         defaultValue="day-1"

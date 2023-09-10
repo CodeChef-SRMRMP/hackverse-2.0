@@ -1,10 +1,10 @@
-import { useTheme } from "next-themes";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useTheme } from 'next-themes';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
-import { HamburgerMenuIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
-import { Button } from "./ui/button";
-import { cn } from "@/lib/utils";
+import { HamburgerMenuIcon, MoonIcon, SunIcon } from '@radix-ui/react-icons';
+import { Button } from './ui/button';
+import { cn } from '@/lib/utils';
 import {
   Sheet,
   SheetContent,
@@ -13,7 +13,8 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from '@/components/ui/sheet';
+import Link from 'next/link';
 
 type routesType = {
   name: string;
@@ -27,28 +28,28 @@ const Header = () => {
 
   const routes: routesType[] = [
     {
-      name: "Sponsors",
-      href: "/",
+      name: 'Sponsors',
+      href: '/',
     },
     {
-      name: "Tracks",
-      href: "/about",
+      name: 'Tracks',
+      href: '/#tracks',
     },
     {
-      name: "Prizes",
-      href: "/blog",
+      name: 'Prizes',
+      href: '/#prize',
     },
     {
-      name: "Speakers",
-      href: "/projects",
+      name: 'Speakers',
+      href: '/#speakers',
     },
     {
-      name: "Schedule",
-      href: "/contact",
+      name: 'Schedule',
+      href: '/#schedule',
     },
     {
-      name: "FAQs",
-      href: "/contact",
+      name: 'FAQs',
+      href: '/#faqs',
     },
   ];
 
@@ -61,28 +62,28 @@ const Header = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   const toggleTheme = () => {
-    if (currentTheme === "dark") {
-      setTheme("light");
-      setCurrentTheme("light");
+    if (currentTheme === 'dark') {
+      setTheme('light');
+      setCurrentTheme('light');
     } else {
-      setTheme("dark");
-      setCurrentTheme("dark");
+      setTheme('dark');
+      setCurrentTheme('dark');
     }
   };
   return (
     <div
       className={cn(
-        "flex  z-50 items-center justify-between px-5 sticky top-0",
+        'flex  z-50 items-center justify-between px-5 sticky top-0',
         scrolled &&
-          "shadow-md bg-background dark:shadow-none dark:border-b dark:border-primary-dark/20 "
+          'shadow-md bg-background dark:shadow-none dark:border-b dark:border-primary-dark/20 '
       )}
     >
       <Image
@@ -95,29 +96,30 @@ const Header = () => {
       <div className="items-center gap-5 hidden lg:inline-flex">
         {routes?.map((route, index) => {
           return (
-            <p
+            <Link
+              href={route.href}
               className="font-bold uppercase cursor-pointer hover:underline hover:underline-offset-4 hover:text-primary/60 dark:hover:text-primary-dark/60 transition-all ease-out active:scale-95"
               key={index}
             >
               {route.name}
-            </p>
+            </Link>
           );
         })}
       </div>
-      {theme === "light" ? (
+      {theme === 'light' ? (
         <Button
           className="hidden lg:inline-flex"
-          variant={"ghost"}
+          variant={'ghost'}
           onClick={toggleTheme}
-          size={"icon"}
+          size={'icon'}
         >
           <MoonIcon className="w-5 h-5" />
         </Button>
       ) : (
         <Button
           className="hidden lg:inline-flex"
-          variant={"ghost"}
-          size={"icon"}
+          variant={'ghost'}
+          size={'icon'}
           onClick={toggleTheme}
         >
           <SunIcon className="h-5 w-5" />
@@ -150,8 +152,8 @@ const Header = () => {
             <p className="uppercase  font-bold animate-pulse ">
               &copy; Hackverse 2.0
             </p>
-            <Button variant={"ghost"} size={"icon"} onClick={toggleTheme}>
-              {theme === "light" ? (
+            <Button variant={'ghost'} size={'icon'} onClick={toggleTheme}>
+              {theme === 'light' ? (
                 <MoonIcon className="w-5 h-5" />
               ) : (
                 <SunIcon className="h-5 w-5" />
