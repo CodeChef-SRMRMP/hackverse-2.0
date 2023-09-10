@@ -18,12 +18,12 @@ const FAQs = () => {
           </AccordionTrigger>
           <AccordionContent>
             To Participate in this hackathon, you need to register you team on
-            devfolio, follow this link{' '}
+            devfolio, follow this{' '}
             <Link
               href={'https://hackverse-tamil-nadu.devfolio.co/'}
               className="text-blue-500 hover:underline"
             >
-              Devfolio
+              Devfolio link
             </Link>{' '}
             to get registered
           </AccordionContent>
