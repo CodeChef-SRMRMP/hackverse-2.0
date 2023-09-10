@@ -1,13 +1,13 @@
 // @ts-ignore
-import MovingText from "react-moving-text";
-import { Counter } from "./Counter";
-import { useEffect } from "react";
-import Image from "next/image";
+import MovingText from 'react-moving-text';
+import { Counter } from './Counter';
+import { useEffect } from 'react';
+import Image from 'next/image';
 
 const Hero = () => {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://apply.devfolio.co/v2/sdk.js";
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
     script.async = true;
     script.defer = true;
     document.body.appendChild(script);
@@ -26,16 +26,16 @@ const Hero = () => {
       />
       <div className="flex flex-col items-center rounded-md">
         <div className="flex items-center font-bold gap-1 text-4xl md:text-7xl lg:text-9xl">
-          {"Hack verse"
+          {'Hack verse'
             .toUpperCase()
-            .split("")
+            .split('')
             .map((letter, index) => {
               return (
                 <MovingText
                   key={index}
                   type="shakeMix"
                   duration="1500ms"
-                  delay={index * 100 + "ms"}
+                  delay={index * 100 + 'ms'}
                   direction="normal"
                   timing="ease"
                   iteration="infinite"
@@ -50,7 +50,7 @@ const Hero = () => {
           <MovingText
             type="shakeMix"
             duration="2000ms"
-            delay={"100ms"}
+            delay={'100ms'}
             direction="normal"
             timing="ease"
             iteration="infinite"
@@ -69,10 +69,10 @@ const Hero = () => {
           <p>27th - 29th october 2023</p>
         </div>
         <div
-          className="apply-button"
+          className="apply-button rounded-md"
           data-hackathon-slug="hackverse-tamil-nadu"
           data-button-theme="dark"
-          style={{ height: "44px", width: "312px" }}
+          style={{ height: '44px', width: '312px' }}
         ></div>
       </div>
       <div className=" p-5 my-5 flex flex-col items-center">
