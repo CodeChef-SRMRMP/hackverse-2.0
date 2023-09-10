@@ -72,9 +72,12 @@ const day3 = [
 
 export default function Schedule() {
   return (
-    <div className="w-screen min-h-[calc(100vh-100px)] max-w-6xl mx-auto px-5">
+    <div className="w-screen max-w-6xl mx-auto px-5">
       <h1 className="text-center text-3xl font-bold py-5">Schedule</h1>
-      <Tabs defaultValue="day-1" className="w-full">
+      <Tabs
+        defaultValue="day-1"
+        className="w-full bg-foreground/20 dark:bg-foreground/5 p-4 rounded-sm"
+      >
         <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="day-1">27 Oct 2023</TabsTrigger>
           <TabsTrigger value="day-2">28 Oct 2023</TabsTrigger>
