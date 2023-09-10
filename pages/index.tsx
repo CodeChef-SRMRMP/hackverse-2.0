@@ -28,7 +28,8 @@ export default function Home() {
   return (
     <main>
       <Head>
-        <title>Hackverse 2.0</title>
+        <title>Hackverse • 2.0</title>
+        <link rel="icon" href="/assets/images/short-logo.ico" />
       </Head>
       <Particles
         id="tsparticles"

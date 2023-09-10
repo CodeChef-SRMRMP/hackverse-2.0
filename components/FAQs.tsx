@@ -3,7 +3,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from '@/components/ui/accordion';
+import Link from 'next/link';
 
 const FAQs = () => {
   return (
@@ -12,21 +13,37 @@ const FAQs = () => {
 
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
+          <AccordionTrigger>
+            How do I participate in a hackathon?
+          </AccordionTrigger>
           <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
+            To Participate in this hackathon, you need to register you team on
+            devfolio, follow this link{' '}
+            <Link
+              href={'https://hackverse-tamil-nadu.devfolio.co/'}
+              className="text-blue-500 hover:underline"
+            >
+              Devfolio
+            </Link>{' '}
+            to get registered
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
+          <AccordionTrigger>
+            Can I work alone in a hackathon, or do I need a team?
+          </AccordionTrigger>
           <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
+            You can work alone or in a team of up to 4 people. The maximum team
+            size is 4.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
+          <AccordionTrigger>
+            Can I attend a hackathon remotely?
+          </AccordionTrigger>
           <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
+            This hackathon is happening in hybrid mode, so you can both attend
+            it in offline or in online mode
           </AccordionContent>
         </AccordionItem>
       </Accordion>
