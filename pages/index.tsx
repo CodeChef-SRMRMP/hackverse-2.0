@@ -11,6 +11,7 @@ import FAQs from '@/components/FAQs';
 import PrizeSection from '@/components/PrizeSection';
 import Schedule from '@/components/Schedule';
 import Footer from '@/components/Footer';
+import CommunityPartners from '@/components/CommunityPartners';
 
 export default function Home() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -109,6 +110,7 @@ export default function Home() {
         <OurSponsors />
         <Schedule />
         <PrizeSection />
+        <CommunityPartners />
         <FAQs />
         <Footer />
       </div>
